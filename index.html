@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lieferklon</title>
+    <link rel="icon" href="./img/favicon.ico" type="imgage/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="fonts.css">
+</head>
+<body onload="renderDishes(), renderBasket(), showResponsiveBasketContainer()">
+    <header>
+        <div class="header-left">
+            <img class="header-icons arrow-left" src="./img/previous.png" alt="">
+            <img class="header-icons" src="./img/logo.png" alt="">
+            <b class="logo-name">Lieferklon</b>
+        </div>
+        <p>Speisekarte</p>
+        <div class="header-right">
+            <img class="header-icons" src="./img/german.png" alt="">
+            <img class="header-icons" src="./img/menu.png" alt="">
+        </div>
+    </header>
+    <div class="main-container">
+        <section class="left-side">
+            <div class="basic-infos">
+                <img src="./img/pizza.jpg" class="preview-img">
+                <div class="description">
+                    <div class="restaurant-name">
+                        <h1>Cucina Italiana</h1>
+                        <div class="description-symbols">
+                            <img src="./img/information.png" alt="" class="info-like-symbols">
+                            <img src="./img/heart.png" alt="" class="info-like-symbols">
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <img src="./img/stars.png" class="stars">
+                        <span class="amount-ratings">352 Bewertungen</span>
+                    </div>
+                    <div class="food-types">
+                        <a href="#salad" class="food-type-link">Salate</a>
+                        <a href="#pizza" class="food-type-link">Pizza</a>
+                        <a href="#pasta" class="food-type-link">Pasta</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dishes" id="dishes"></div>
+        </section>
+        <section class="right-side">
+            <h2 class="shopping-basket-headline">Warenkorb</h2>
+            <div class="order-options">
+                <button class="certain-order-option">
+                    <img src="./img/delivery.png" class="order-option-img">
+                    <div class="order-option-text">
+                        <span style="padding-bottom: 3px;">Lieferung</span>
+                        <span style="font-size: 12px;">30 - 55 min</span>
+                    </div>
+                </button>
+            </div>
+            <div id="basket-container" class="basket-container"></div>
+        </section>
+        <div id="overlay" onclick="closeOverlay()">
+            <div class="mobileOverlay()">
+                <h2 id="overlay-text">Vielen Dank für deine Bestellung!</h1>
+            </div>
+        </div>
+    </div>
+    <div id="responsive-basket-container" style="display: none;">
+        <button id="responsive-basket-btn" onclick="responsiveBasket()">
+            <h2 class="responsive-basket-btn-txt" >Warenkorb</h2>
+        </button>
+    </div>
+    <div id="responsive-basket" class="responsive-basket hidden">
+        <div class="respBasketHeader">
+            <h2>Warenkorb</h2>
+            <img src="./img/close.png" onclick="closeResponsiveBasket()" class="close-img">
+        </div>
+        <div class="mobile-order-options-section">
+            <div class="mobile-order-options">
+                <button class="certain-order-option">
+                    <img src="./img/delivery.png" class="order-option-img">
+                    <div class="order-option-text">
+                        <span style="padding-bottom: 3px;">Lieferung</span>
+                        <span style="font-size: 12px;">30 - 55 min</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-basket"></div>    
+    </div>
+    <footer>
+        <a href="#" class="footer-links">Datenschutz</a>
+        <a href="#" class="footer-links">Impressum</a>
+    </footer>
+</body>
+</html>
